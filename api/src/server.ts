@@ -25,7 +25,7 @@ server.use(cors(corsOptions));
 server.use(middlewares);
 
 // Health check endpoint
-server.get('/health', (req, res) => {
+server.get('/health', (_req: any, res: any) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
