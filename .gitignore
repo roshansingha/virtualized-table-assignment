@@ -1,0 +1,39 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Database
+db.json
+
+# Test
+coverage
+
+# Evaluation/Review Documents (not part of submission)
+STAFF_EVALUATION_REPORT.md
+CODE_REVIEW_ANALYSIS.md
+OPTIMIZATION_SUMMARY.md
+VERIFICATION.md
+PROJECT_COMPLETION.md
+SUMMARY.md
+PORT_CONFIGURATION.md
