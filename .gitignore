@@ -1,16 +1,28 @@
+# Dependencies
+node_modules
+**/node_modules
+
+# Build outputs
+dist
+**/dist
+dist-ssr
+**/dist-ssr
+
+# Environment files
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+!**/.env.example
+
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
 
 # Editor directories and files
 .vscode/*
@@ -25,9 +37,12 @@ dist-ssr
 
 # Database
 db.json
+**/db.json
+api/data/db.json
 
 # Test
 coverage
+**/coverage
 
 # Evaluation/Review Documents (not part of submission)
 STAFF_EVALUATION_REPORT.md
@@ -37,3 +52,8 @@ VERIFICATION.md
 PROJECT_COMPLETION.md
 SUMMARY.md
 PORT_CONFIGURATION.md
+REFACTORING_PLAN.md
+MIGRATION_SUMMARY.md
+FOLDER_STRUCTURE_GUIDE.md
+MIGRATION_COMPLETE.md
+MIGRATION_SUCCESS.md

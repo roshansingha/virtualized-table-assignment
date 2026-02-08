@@ -1,0 +1,23 @@
+{
+  "name": "@data-table/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "generate-data": "cd .. && pnpm --filter shared generate-data"
+  },
+  "dependencies": {
+    "json-server": "1.0.0-beta.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/node": "^24.10.1",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3"
+  }
+}
