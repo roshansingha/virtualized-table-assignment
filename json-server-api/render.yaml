@@ -2,7 +2,7 @@ services:
   - type: web
     name: entity-json-server
     env: node
-    buildCommand: npm install && npm run build
+    buildCommand: npm install && npm run verify && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_VERSION
