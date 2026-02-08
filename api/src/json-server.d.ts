@@ -1,19 +1,17 @@
 declare module 'json-server' {
-    import { Express, RequestHandler } from 'express';
+    import { Application, RequestHandler } from 'express';
 
-    interface JsonServerRouter {
-        db: any;
-        render: (req: any, res: any) => void;
-    }
+    function create(): Application;
+    function router(source: string | object, options?: any): RequestHandler;
+    function defaults(options?: any): RequestHandler[];
+    function rewriter(routes: object): RequestHandler;
+    const bodyParser: RequestHandler;
 
-    interface JsonServer {
-        create(): Express;
-        router(source: string | object, options?: any): JsonServerRouter;
-        defaults(options?: any): RequestHandler[];
-        rewriter(routes: object): RequestHandler;
-        bodyParser: RequestHandler;
-    }
-
-    const jsonServer: JsonServer;
-    export default jsonServer;
+    export default {
+        create,
+        router,
+        defaults,
+        rewriter,
+        bodyParser
+    };
 }
