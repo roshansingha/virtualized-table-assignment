@@ -12,8 +12,8 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["node"]
+    "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "data"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "data", "src/**/*.js"]
 }
