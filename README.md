@@ -4,7 +4,8 @@ A production-quality React + TypeScript application featuring a high-performance
 
 ## 🚀 Live Demo
 
-[Deploy Link - To be added after deployment]
+**Frontend**: [https://virtualized-table-assignment.netlify.app/](https://virtualized-table-assignment.netlify.app/)  
+**API**: [https://virtualized-table-assignment.onrender.com/entities](https://virtualized-table-assignment.onrender.com/entities)
 
 ## 📋 Table of Contents
 

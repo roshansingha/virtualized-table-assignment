@@ -2,7 +2,10 @@ import { useEffect } from 'react';
 import { useTableStore } from '../store/useTableStore';
 import type { Entity } from '../types/entity';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/entities';
+// Use production API when deployed, localhost for development
+const API_URL = import.meta.env.DEV
+    ? 'http://localhost:8000/entities'
+    : 'https://virtualized-table-assignment.onrender.com/entities';
 
 export function useEntities() {
     const setEntities = useTableStore((state) => state.setEntities);
