@@ -94,7 +94,7 @@ const entities = generateEntities(1000);
 const db = { entities };
 
 // Write to file
-const outputPath = join(process.cwd(), '../api/data/db.json');
+const outputPath = join(process.cwd(), 'db.json');
 writeFileSync(outputPath, JSON.stringify(db, null, 2));
 
 console.log(`✅ Generated ${entities.length} entities`);

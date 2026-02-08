@@ -1,21 +1,45 @@
 {
-  "name": "data-table-monorepo",
-  "version": "1.0.0",
+  "name": "data-table-app",
   "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"pnpm --filter api dev\" \"pnpm --filter frontend dev\"",
-    "dev:frontend": "pnpm --filter frontend dev",
-    "dev:api": "pnpm --filter api dev",
-    "build": "pnpm --filter api build && pnpm --filter frontend build",
-    "build:frontend": "pnpm --filter frontend build",
-    "build:api": "pnpm --filter api build",
-    "test": "pnpm --filter frontend test",
-    "test:run": "pnpm --filter frontend test:run",
-    "generate-data": "pnpm --filter shared generate-data",
-    "lint": "pnpm --filter frontend lint"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "json-server": "json-server db.json --port 8000",
+    "generate-data": "tsx scripts/generateData.ts"
+  },
+  "dependencies": {
+    "@tanstack/react-virtual": "^3.13.18",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zustand": "^5.0.11"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "@eslint/js": "^9.39.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/ui": "^4.0.18",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "jsdom": "^28.0.0",
+    "json-server": "1.0.0-beta.5",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.18"
   }
 }
