@@ -1,0 +1,35 @@
+{
+  "name": "entity-json-server",
+  "version": "1.0.0",
+  "description": "Standalone JSON Server for Entity Data API",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "generate-data": "tsx src/generateData.ts",
+    "postinstall": "npm run generate-data"
+  },
+  "keywords": [
+    "json-server",
+    "api",
+    "mock-data"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "json-server": "1.0.0-beta.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/node": "^24.10.1",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
