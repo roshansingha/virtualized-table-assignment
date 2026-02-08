@@ -6,9 +6,10 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "npm run generate-data && tsc",
+    "build": "tsc",
     "start": "node dist/server.js",
-    "generate-data": "tsx src/generateData.ts"
+    "generate-data": "node src/generateData.js",
+    "prebuild": "npm run generate-data"
   },
   "keywords": [
     "json-server",
